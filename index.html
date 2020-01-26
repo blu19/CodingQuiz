@@ -9,25 +9,36 @@
     <title>Coding Quiz</title>
 </head>
 <body>
-    <div class="quizContainer container-fluid">
-        <h1 class="text-center">Coding Quiz</h1>
+    <div class="grid quizContainer container-fluid">
         <div id="quiz1" class="text-center">
+            <h1 class="text-center">Coding Quiz</h1>
+            <hr style="margin-bottom: 20px;">
+
+            <!--Start button-->
             <div>
                 <button type="button" class="startBtn btn btn-primary">Start Quiz</button>
-
-            <!-- <button type="button" class="startBtn" style="position: relative; color: seagreen;">Start</button> -->
             </div>
-            <br>
-            <p id="currentQ" style="font-size: larger">Display quiz question here</p>
+
+            <!--Questions-->
+            <div id="displayQuestion" class="quizQuestions" style="font-size: larger">Display quiz question here</div>
+
+            <!--Answer options-->
+            <div id="answerOptions" class="buttons">
+                <button id="choice0" type="button" class="btn btn-primary btn-lg">A</button>
+                <button id="choice1" type="button" class="btn btn-primary btn-lg">B</button>
+                <button id="choice2" type="button" class="btn btn-primary btn-lg">C</button>
+                <button id="choice3" type="button" class="btn btn-primary btn-lg">D</button>
+            </div>
+            <hr style="margin-top: 50px;">
             <h4 id="count" style="color: rgb(50, 65, 65); position: absolute; left: 85%; top: 2%">
             <span id="showTime">Starting Time: 60s</span>
             <br>
             <span id="timer" style="font-size: 24px"></span>
             </h4>
-            <div style="font-size: larger">Answer options</div>
         </div>
     </div>
+    <!--Commented out questions.js cause just put the questions on the same js file-->
+    <!--<script type="text/javascript" src="questions.js"></script>-->
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="questions.js"></script>
 </body>
 </html>
