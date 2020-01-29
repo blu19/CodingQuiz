@@ -16,18 +16,18 @@
 
             <!--Start button-->
             <div>
-                <button type="button" class="startBtn btn btn-primary">Start Quiz</button>
+                <button type="button" onclick="startQuiz()" class="startBtn btn btn-primary">Start Quiz</button>
             </div>
 
             <!--Questions-->
-            <div id="displayQuestion" class="quizQuestions" style="font-size: larger">Display quiz question here</div>
+            <div id="displayQuestion" class="quizQuestions" style="font-size: larger">Good luck!!</div>
 
             <!--Answer options-->
             <div id="answerOptions" class="buttons">
-                <button id="choice0" type="button" class="btn btn-primary btn-lg">A</button>
-                <button id="choice1" type="button" class="btn btn-primary btn-lg">B</button>
-                <button id="choice2" type="button" class="btn btn-primary btn-lg">C</button>
-                <button id="choice3" type="button" class="btn btn-primary btn-lg">D</button>
+                <button id="choice0" type="button" onclick="checkAnswers(this)" class="btn btn-primary btn-lg choice">A</button>
+                <button id="choice1" type="button" onclick="checkAnswers(this)" class="btn btn-primary btn-lg choice">B</button>
+                <button id="choice2" type="button" onclick="checkAnswers(this)" class="btn btn-primary btn-lg choice">C</button>
+                <button id="choice3" type="button" onclick="checkAnswers(this)" class="btn btn-primary btn-lg choice">D</button>
             </div>
             <hr style="margin-top: 50px;">
             <h4 id="count" style="color: rgb(50, 65, 65); position: absolute; left: 85%; top: 2%">
@@ -35,10 +35,13 @@
             <br>
             <span id="timer" style="font-size: 24px"></span>
             </h4>
+            <h4 id="scores" style="color: rgb(50, 65, 65); position: absolute; right: 85%; top: 2%">
+            <span id="highScore">High Score: </span>
+            <br>
+            <h2 id="confirmAnswer"></h2>
+
         </div>
     </div>
-    <!--Commented out questions.js cause just put the questions on the same js file-->
-    <!--<script type="text/javascript" src="questions.js"></script>-->
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
