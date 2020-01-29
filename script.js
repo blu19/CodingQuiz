@@ -40,7 +40,7 @@ var answer = "";
         var interval = setInterval(function () {
             document.querySelector("#count").innerHTML = "Remaining Time: " + count + "s";
             count--;
-            if (count === -2) {
+            if (count <= -2) {
                 clearInterval(interval);
                 document.querySelector("#count").innerHTML = "End of Quiz";
             };
@@ -90,7 +90,7 @@ var answer = "";
             document.querySelector("#confirmAnswer").innerHTML = "Correct!!";            
         } else {
             document.querySelector("#confirmAnswer").innerHTML = "Wrong!!";
-            count = count - 10;
+            count = count - 15;
         } 
         i++;
         quiz();
